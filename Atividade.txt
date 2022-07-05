@@ -1,0 +1,319 @@
+	Lucas Rodrigues Atividade If    2b2
+ 
+ 
+ 
+1-using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ListaDosIfs
+{
+    public partial class FormExercicio01 : Form
+    {
+        public FormExercicio01()
+        {
+            InitializeComponent();
+        }
+
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            float Num01 =   float.Parse(txtNum01.Text);
+            float Num02 =   float.Parse(txtNum02.Text);
+
+            if (Num01 == Num02)
+            {
+                lblResultado.Text = ("Os números são iguais");
+            }
+            else if (Num01 > Num02)
+            {
+                lblResultado.Text = ("O Primeiro número é maior");
+            }
+
+            else 
+            {
+                lblResultado.Text = ("O Segundo número é o maior");
+            }
+        }
+    }
+}
+
+
+
+2-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ListaDosIfs
+{
+    public partial class FormExercicio02 : Form
+    {
+        public FormExercicio02()
+        {
+            InitializeComponent();
+        }
+
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            int anonascimento = int.Parse(txtAno.Text);
+            int anoeleicao = 2022;
+
+            if (anoeleicao - anonascimento >= 16)
+                lblResultado.Text = "Pode Votar";
+            else
+                lblResultado.Text = "Não pode votar";
+        }
+    }
+}
+
+
+
+3-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ListaDosIfs
+{
+    public partial class FormExercicio03 : Form
+    {
+        public FormExercicio03()
+        {
+            InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string user = txtUser.Text;
+            string key = txtKey.Text;
+            if (user == "admin" && key == "1234") 
+            MessageBox.Show("User Ok");
+            else 
+                MessageBox.Show("User or key are invalid");
+        }
+    }
+}
+
+
+
+4-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ListaDosIfs
+{
+    public partial class FormExercicio04 : Form
+    {
+        public FormExercicio04()
+        {
+            InitializeComponent();
+        }
+
+        private void btnResultado_Click(object sender, EventArgs e)
+        {
+            float qtdmacas = float.Parse(txtQtdMacas.Text);
+
+            if (qtdmacas > 0 && qtdmacas < 12)
+                MessageBox.Show("O valor a ser pago é R$" + qtdmacas * 0.3);
+            else
+                MessageBox.Show("O valor a ser pago é R$" + qtdmacas * 0.25);
+
+
+        }
+    }
+}
+
+
+
+5-
+{
+            //variavéis
+
+            float lanche = float.Parse (txtVllanche.Text);
+
+            float valor = float.Parse (txtValor.Text);
+
+            float troco;
+
+            //Calculo
+
+            troco =  valor - lanche;
+
+            txtTroco.Text = troco.ToString();
+
+}
+
+6-
+
+7-
+ private void button1_Click(object sender, EventArgs e)
+        {
+            string genero = txtGenero.Text;
+            float altura = float.Parse(txtAltura.Text);
+            float peso = float.Parse(txtPeso.Text);
+            float calculo;
+            if (genero == "Feminino")
+            {
+                calculo = (peso * altura) - 44.7f;
+                MessageBox.Show("O peso ideal é: "+ calculo);
+            }
+            else if (genero == "Masculino")
+            {
+                calculo = (peso * altura) - 58;
+                MessageBox.Show("O peso ideal é: " + calculo);
+            }
+
+
+8-
+ private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            string genero = txtGenero.Text;
+
+            if(genero == "f")
+            {
+                MessageBox.Show("Sexo feminino");
+            }
+            else if (genero == "m")
+            {
+                MessageBox.Show("Sexo inválido pois é um projeto de mulheres");
+            }
+
+
+
+
+9-
+  private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            int valor = int.Parse(txtValor.Text);
+
+            if (valor > 0 )
+            {
+                MessageBox.Show("Valor e positivo");
+            }
+            else if (valor < 0)
+            {
+                MessageBox.Show("Valor negativo ");
+            }
+            else
+            {
+                MessageBox.Show("Valor neutro ou postivo");
+            }
+
+10- 
+float vlrImc;
+            float vlrPeso = float.Parse(txtPeso.Text);
+            float vlrAltura = float.Parse(txtAltura.Text);
+
+            vlrImc = vlrPeso / (vlrAltura * vlrAltura);
+            if (vlrImc <= 18.5) { lblResult.Text = "IMC" + vlrImc + " Abaixo do peso."; }
+            else if (vlrImc <= 25) { lblResult.Text = "IMC" + vlrImc + " Peso normal."; }
+            else if (vlrImc <= 30) { lblResult.Text = "IMC" + vlrImc + " Peso normal."; }
+            else { lblResult.Text = "IMC" + vlrImc + " Acima do Peso"; }
+
+11-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace switch_case1
+{
+    public partial class Questao11 : Form
+    {
+        public Questao11()
+        {
+            InitializeComponent();
+        }
+
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            float defaultPrice = float.Parse(txtPreco.Text);
+            float finalPrice;
+            float installment;
+
+            if (rdoCashMoney.Checked) { finalPrice = defaultPrice;
+                lblResult.Text = "U$" + finalPrice;
+            }
+            else if (rdoCreditCash.Checked) {
+                finalPrice = defaultPrice;
+                lblResult.Text = "U$" + finalPrice;
+            }
+            else if (rdo2x0.Checked) { installment = defaultPrice / 2;
+                finalPrice = defaultPrice;
+                lblResult.Text = "U$" + finalPrice + "//" + installment + "each installment"; }
+            else if (rdo2x10.Checked) { installment = (defaultPrice / 2 * 10 / 100 +defaultPrice)/2; finalPrice = defaultPrice + defaultPrice * 10/100;
+                lblResult.Text = "U$" + finalPrice + "//" + installment + "each installment";
+            }
+            else { MessageBox.Show("Payment method invalid"); }
+
+
+
+        }
+    }
+}
+
+12
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace switch_case1
+{
+    public partial class Questao12 : Form
+    {
+        public Questao12()
+        {
+            InitializeComponent();
+        }
+
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            float notaAluno=float.Parse(txtNota.Text);
+
+            if (notaAluno <= 40) { lblResult.Text = "E"; }
+            else if(notaAluno <= 60) { lblResult.Text = "D"; }
+            else if (notaAluno <= 75) { lblResult.Text = "C"; }
+            else if (notaAluno <= 90) { lblResult.Text = "B"; }
+            else { lblResult.Text = "A"; }
+        }
+        
+    }
+}
+
+
